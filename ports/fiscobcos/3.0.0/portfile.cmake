@@ -6,6 +6,6 @@ vcpkg_from_github(
     HEAD_REF feature-3.0.0
 )
 
-vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH})
-vcpkg_cmake_install()
-# file(INSTALL "${SOURCE_PATH}/COPYING" DESTINATION "${CURRENT_PACKAGES_DIR}/share/libogg" RENAME copyright)
+vcpkg_configure_cmake(SOURCE_PATH ${SOURCE_PATH})
+vcpkg_build_cmake()
+vcpkg_install_cmake()
