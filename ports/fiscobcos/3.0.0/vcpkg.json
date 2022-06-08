@@ -1,5 +1,5 @@
 {
-    "name": "fisco-bcos",
+    "name": "fiscobcos",
     "version-string": "3.0.0",
     "homepage": "https://github.com/FISCO-BCOS/FISCO-BCOS",
     "description": "FISCO BCOS",
@@ -10,11 +10,11 @@
         "boost-thread",
         "boost-test",
         "boost-multiprecision",
-	"tbb",
-	"rocksdb",
-	"zlib",
-	"jsoncpp",
-	"zstd",
-	"protobuf"
+        "tbb",
+        "rocksdb",
+        "zlib",
+        "jsoncpp",
+        "zstd",
+        "protobuf"
     ]
 }
