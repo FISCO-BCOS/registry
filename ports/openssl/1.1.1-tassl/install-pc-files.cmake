@@ -8,13 +8,13 @@ function(install_pc_file name pc_data)
 endfunction()
 
 install_pc_file(openssl [[
-Name: TASSL
+Name: OpenSSL
 Description: Secure Sockets Layer and cryptography libraries and tools
 Requires: libssl libcrypto
 ]])
 
 install_pc_file(libssl [[
-Name: TASSL-libssl
+Name: libssl
 Description: Secure Sockets Layer and cryptography libraries
 Libs: -L"${libdir}" -llibssl
 Requires: libcrypto
@@ -22,7 +22,7 @@ Cflags: -I"${includedir}"
 ]])
 
 install_pc_file(libcrypto [[
-Name: TASSL-libcrypto
+Name: libcrypto
 Description: OpenSSL cryptography library
 Libs: -L"${libdir}" -llibcrypto
 Libs.private: -lcrypt32 -lws2_32

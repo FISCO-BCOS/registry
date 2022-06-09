@@ -11,7 +11,7 @@ It can be installed on alpine systems via apk add linux-headers.]]
     )
 endif()
 
-set(TASSL_VERSION 1.1.1)
+set(OPENSSL_VERSION 1.1.1)
 
 vcpkg_download_distfile(
     ARCHIVE
