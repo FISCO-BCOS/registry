@@ -1,6 +1,0 @@
-prefix=${pcfiledir}/../..
-exec_prefix=${prefix}/tassl
-libdir=${exec_prefix}/lib/tassl
-includedir=${prefix}/include/tassl
-Version: @TASSL_VERSION@
-@pc_data@

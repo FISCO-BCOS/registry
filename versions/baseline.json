@@ -4,8 +4,8 @@
       "baseline": "3.0.0",
       "port-version": 0
     },
-    "tassl": {
-      "baseline": "1.1.1",
+    "openssl": {
+      "baseline": "1.1.1-tassl",
       "port-version": 0
     },
     "evmone": {

@@ -130,7 +130,6 @@ else()
     set(SHARED no-shared)
     set(LIB_EXTS a)
 endif()
-# rename the openssl.pc to tassl.pc
 
 set(INSTALL_PKG_CONFIGS "${BUILDDIR}/openssl.pc")
 foreach(lib ssl crypto)
@@ -275,11 +274,11 @@ endif()
 
 install(
     FILES ${INSTALL_LIBS}
-    DESTINATION lib/tassl
+    DESTINATION lib
 )
 install(
     FILES ${INSTALL_BINS}
-    DESTINATION bin/tassl
+    DESTINATION bin
 )
 install(
     FILES ${INSTALL_PKG_CONFIGS}

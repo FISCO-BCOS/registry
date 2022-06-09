@@ -1,13 +1,13 @@
 function(install_pc_file name pc_data)
     if(NOT DEFINED VCPKG_BUILD_TYPE OR VCPKG_BUILD_TYPE STREQUAL "release")
-        configure_file("${CMAKE_CURRENT_LIST_DIR}/tassl.pc.in" "${CURRENT_PACKAGES_DIR}/lib/pkgconfig/${name}.pc" @ONLY)
+        configure_file("${CMAKE_CURRENT_LIST_DIR}/openssl.pc.in" "${CURRENT_PACKAGES_DIR}/lib/pkgconfig/${name}.pc" @ONLY)
     endif()
     if(NOT DEFINED VCPKG_BUILD_TYPE OR VCPKG_BUILD_TYPE STREQUAL "debug")
-        configure_file("${CMAKE_CURRENT_LIST_DIR}/tassl.pc.in" "${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/${name}.pc" @ONLY)
+        configure_file("${CMAKE_CURRENT_LIST_DIR}/openssl.pc.in" "${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/${name}.pc" @ONLY)
     endif()
 endfunction()
 
-install_pc_file(tassl [[
+install_pc_file(openssl [[
 Name: TASSL
 Description: Secure Sockets Layer and cryptography libraries and tools
 Requires: libssl libcrypto

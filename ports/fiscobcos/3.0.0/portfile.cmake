@@ -6,6 +6,6 @@ vcpkg_from_github(
     HEAD_REF feature-3.0.0
 )
 
-vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} )
+vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH})
 vcpkg_cmake_build()
 vcpkg_cmake_install()
