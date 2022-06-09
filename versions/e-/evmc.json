@@ -1,0 +1,9 @@
+{
+    "versions": [
+      {
+        "version": "1.0.0",
+        "path": "$/ports/evmc/1.0.0"
+      }
+    ]
+  }
+  
