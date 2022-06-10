@@ -6,11 +6,10 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-# vcpkg_cmake_config_fixup()
 vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} OPTIONS -DBUILD_SHARED_LIBS=OFF)
 vcpkg_cmake_build()
 vcpkg_cmake_install()
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include" "${CURRENT_PACKAGES_DIR}/debug/share")
 vcpkg_cmake_config_fixup(CONFIG_PATH /lib/cmake/evmc)
 file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
 vcpkg_fixup_pkgconfig()
