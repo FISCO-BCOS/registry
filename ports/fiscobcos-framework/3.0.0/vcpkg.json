@@ -1,8 +1,8 @@
 {
-    "name": "fiscobcos-crypto",
+    "name": "fiscobcos-framework",
     "version-string": "3.0.0",
     "homepage": "https://github.com/FISCO-BCOS/FISCO-BCOS",
-    "description": "FISCO BCOS crypto",
+    "description": "FISCO BCOS framework",
     "dependencies": [
         {
             "name": "vcpkg-cmake",
@@ -12,11 +12,6 @@
             "name": "vcpkg-cmake-config",
             "host": true
         },
-        "fiscobcos-utilities",
-        "openssl",
-        "boost-log",
-        "boost-filesystem",
-        "boost-chrono",
-        "boost-thread"
+        "fiscobcos-crypto"
     ]
 }

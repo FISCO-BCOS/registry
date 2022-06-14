@@ -6,7 +6,7 @@ vcpkg_from_github(
     HEAD_REF feature-3.0.0
 )
 
-vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} OPTIONS -DALL_COMPONENTS=OFF -DUTILITIES=ON)
+vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} OPTIONS -DALL_COMPONENTS=OFF -DBOOSTSSL=ON)
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")

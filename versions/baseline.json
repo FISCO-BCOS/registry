@@ -12,6 +12,14 @@
       "baseline": "3.0.0",
       "port-version": 0
     },
+    "fiscobcos-framework": {
+      "baseline": "3.0.0",
+      "port-version": 0
+    },
+    "fiscobcos-boostssl": {
+      "baseline": "3.0.0",
+      "port-version": 0
+    },
     "openssl": {
       "baseline": "1.1.1-tassl",
       "port-version": 0
