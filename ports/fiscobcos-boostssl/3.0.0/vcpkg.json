@@ -1,0 +1,17 @@
+{
+    "name": "fiscobcos-boostssl",
+    "version-string": "3.0.0",
+    "homepage": "https://github.com/FISCO-BCOS/FISCO-BCOS",
+    "description": "FISCO BCOS boostssl",
+    "dependencies": [
+        {
+            "name": "vcpkg-cmake",
+            "host": true
+        },
+        {
+            "name": "vcpkg-cmake-config",
+            "host": true
+        },
+        "fiscobcos-framework"
+    ]
+}
