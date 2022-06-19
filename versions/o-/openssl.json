@@ -2,7 +2,7 @@
   "versions": [
     {
       "version": "1.1.1-tassl",
-      "path": "105209ff0b71c9f9073558d1c4d483535917d20d"
+      "git-tree": "105209ff0b71c9f9073558d1c4d483535917d20d"
     }
   ]
 }

@@ -2,7 +2,7 @@
     "versions": [
       {
         "version": "1.0.0",
-        "path": "9ac4697c232154211e820b9059fe2c9c25674b7e"
+        "git-tree": "9ac4697c232154211e820b9059fe2c9c25674b7e"
       }
     ]
   }
