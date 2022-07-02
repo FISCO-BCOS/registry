@@ -20,7 +20,7 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_build()
 vcpkg_cmake_install()
-vcpkg_fixup_pkgconfig()
 
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(INSTALL "${MASTER_COPY_SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
