@@ -6,6 +6,6 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH})
+vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} GENERATOR "Unix Makefiles")
 vcpkg_build_make()
 vcpkg_cmake_install()
