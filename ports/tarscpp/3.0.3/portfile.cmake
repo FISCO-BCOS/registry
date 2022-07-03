@@ -1,11 +1,19 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO FISCO-BCOS/TarsCpp
-    REF 5ef1e21daaf1e143e81be5c7560c879f76edf447
-    SHA512 1becacf870d45eb1d14ba1fd05dea4abeb8736d07127b1dccb7715250dfb730f0490ab95eb0d207591666cce081a4e6f5c7a45e18f738b184a981e37a77ec783
+    REF f98bb18f9cc59a19a29582689a718f167625cba8
+    SHA512 35648add91d90c477dd1114352e07ee9a7bcf8191b1fea2671551bee47c9749e5f25bff68b1e0f66207a7862213df83b4c4bfa2a91ce5689f54d3aa82dcc507f
     HEAD_REF master
 )
 
-vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} GENERATOR "Unix Makefiles")
-vcpkg_build_make()
+vcpkg_cmake_configure(
+    SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS -DTARS_MYSQL=OFF
+)
+
+vcpkg_cmake_build(DISABLE_PARALLEL)
 vcpkg_cmake_install()
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
