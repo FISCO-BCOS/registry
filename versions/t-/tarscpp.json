@@ -2,7 +2,7 @@
   "versions": [
     {
       "version": "3.0.3",
-      "path": "$/ports/tarscpp/3.0.3"
+      "git-tree": "23f44598a8b15c33b46ec3265f1ec6b3e008c538"
     }
   ]
 }
