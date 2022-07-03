@@ -9,6 +9,7 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS -DTARS_MYSQL=OFF
+    DISABLE_PARALLEL_CONFIGURE
 )
 
 vcpkg_cmake_build(DISABLE_PARALLEL)
