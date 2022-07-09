@@ -1,8 +1,8 @@
 {
-    "name": "evmone",
-    "version-string": "1.0.0",
-    "homepage": "https://github.com/FISCO-BCOS/evmone",
-    "description": "evmone",
+    "name": "intx",
+    "version-string": "0.6.0",
+    "homepage": "https://github.com/chfast/intx",
+    "description": "intx",
     "dependencies": [
         {
             "name": "vcpkg-cmake",
