@@ -1,6 +1,6 @@
 {
     "name": "evmone",
-    "version-string": "1.0.0",
+    "version-string": "0.8.2",
     "homepage": "https://github.com/FISCO-BCOS/evmone",
     "description": "evmone",
     "dependencies": [
@@ -13,6 +13,7 @@
             "host": true
         },
         "ethash",
-        "intx"
+        "intx",
+        "evmc"
     ]
 }

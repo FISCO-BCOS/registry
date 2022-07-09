@@ -1,6 +1,6 @@
 {
     "name": "evmc",
-    "version-string": "1.0.0",
+    "version-string": "9.0.0",
     "homepage": "https://github.com/FISCO-BCOS/evmc",
     "description": "evmc",
     "dependencies": [
