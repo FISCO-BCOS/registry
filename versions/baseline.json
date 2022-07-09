@@ -25,11 +25,19 @@
       "port-version": 0
     },
     "evmone": {
-      "baseline": "1.0.0",
+      "baseline": "0.8.2",
       "port-version": 0
     },
     "evmc": {
-      "baseline": "1.0.0",
+      "baseline": "9.0.0",
+      "port-version": 0
+    },
+    "ethash": {
+      "baseline": "0.7.0",
+      "port-version": 0
+    },
+    "intx": {
+      "baseline": "0.6.0",
       "port-version": 0
     },
     "tarscpp": {
