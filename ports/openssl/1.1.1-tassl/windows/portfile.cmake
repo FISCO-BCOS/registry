@@ -13,7 +13,7 @@ vcpkg_find_acquire_program(JOM)
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
     set(OPENSSL_SHARED shared)
 else()
-    set(OPENSSL_SHARED no-shared no-module)
+    set(OPENSSL_SHARED no-shared)
 endif()
 
 vcpkg_cmake_get_vars(cmake_vars_file)
