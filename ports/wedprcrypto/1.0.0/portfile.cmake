@@ -14,11 +14,7 @@ vcpkg_extract_source_archive_ex(
 set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)
 set(VCPKG_POLICY_SKIP_DUMPBIN_CHECKS enabled)
 
-set(CARGO_FIND_PATHS $ENV{PATH})
-list(LENGTH CARGO_FIND_PATHS len)
-message(STATUS "ENV PATH: ${len} ----- ${CARGO_FIND_PATHS}")
-find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "C:\\Users\\65193\\.cargo\\bin\\")
-# find_program(CARGO_BIN NAMES cargo REQUIRED PATHS ${CARGO_FIND_PATHS}})
+find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "$ENV{USERPROFILE}\\.cargo\\bin")
 message(STATUS "CARGO BIN: ${CARGO_BIN}")
 
 vcpkg_cmake_configure(
