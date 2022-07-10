@@ -11,7 +11,11 @@ vcpkg_extract_source_archive_ex(
     REF 1.0.0
 )
 
-find_program(CARGO_BIN cargo REQUIRED)
+set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)
+set(VCPKG_POLICY_SKIP_DUMPBIN_CHECKS enabled)
+
+find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "$ENV{USERPROFILE}\\.cargo\\bin")
+message(STATUS "CARGO BIN: ${CARGO_BIN}")
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}"
