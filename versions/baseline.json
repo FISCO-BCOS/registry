@@ -4,18 +4,6 @@
       "baseline": "3.0.0",
       "port-version": 0
     },
-    "fiscobcos-utilities": {
-      "baseline": "3.0.0",
-      "port-version": 0
-    },
-    "fiscobcos-crypto": {
-      "baseline": "3.0.0",
-      "port-version": 0
-    },
-    "fiscobcos-framework": {
-      "baseline": "3.0.0",
-      "port-version": 0
-    },
     "fiscobcos-boostssl": {
       "baseline": "3.0.0",
       "port-version": 0

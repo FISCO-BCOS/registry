@@ -2,7 +2,7 @@
   "versions": [
     {
       "version": "3.0.0",
-      "path": "$/ports/fiscobcos/3.0.0"
+      "git-tree": "b707a7b74ab271472c5df9beca3fb874322c5589"
     }
   ]
 }
