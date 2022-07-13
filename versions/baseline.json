@@ -35,6 +35,10 @@
     "wedprcrypto": {
       "baseline": "1.0.0",
       "port-version": 0
+    },
+    "boost-context": {
+      "baseline": "1.79.0_m1",
+      "port-version": 0
     }
   }
 }
