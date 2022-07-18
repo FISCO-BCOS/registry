@@ -1,8 +1,8 @@
 vcpkg_download_distfile(
     ARCHIVE
-    URLS "https://github.com/WeBankBlockchain/WeDPR-Lab-Crypto/archive/0e3ca8614808825da4f91acc51e1031a5184119e.tar.gz"
+    URLS "https://github.com/WeBankBlockchain/WeDPR-Lab-Crypto/archive/88e3e9c20ec324b506a67fd88f5240529a2c01ff.tar.gz"
     FILENAME "wedpr-crypto.tar.gz"
-    SHA512 c548e53033e334ab2b8f6c26d23389a2727e4ca9b17369bb90551e6e6b1689c28ee100efb82e44bd49cfa36ed7e5e6a2bc7c77e1b9efc35a18958c3b57a90293
+    SHA512 5f1ff9fecb97380e0ad6aebb904e5d045ed63e0cef96e1db7d1a1e69c1749578906d19f97fd0ae04ae79ca901d2371e69202e173a6f20d585ead473d7a1486ca
 )
 
 vcpkg_extract_source_archive_ex(
