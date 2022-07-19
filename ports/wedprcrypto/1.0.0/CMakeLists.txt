@@ -15,6 +15,8 @@ ExternalProject_Add(wedprcrypto
     --no-default-features --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_crypto_binary/Cargo.toml
   COMMAND ${CARGO_BIN} +nightly-2021-06-17 build --release
     --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_fisco_bcos/Cargo.toml
+  COMMAND ${CARGO_BIN} +nightly-2021-06-17 build --release
+    --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_zkp/Cargo.toml
   INSTALL_COMMAND ""
   # INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_BINARY_DIR}/wedpr-crypto-prefix/src/wedpr-crypto/third_party/include" "${WEDPR_CRYPTO_INSTALL}/include/wedpr-crypto"
 )
@@ -23,9 +25,10 @@ file(GLOB_RECURSE HEADERS ${SOURCE_PATH}/third_party/include/*.h)
 # set(WEDPR_CRYPTO_INCLUDE_DIRS "${WEDPR_CRYPTO_INSTALL}/include/")
 set(WEDPR_CRYPTO_crypto_LIBRARIES "${SOURCE_PATH}/target/release/${CMAKE_STATIC_LIBRARY_PREFIX}ffi_c_crypto_binary${CMAKE_STATIC_LIBRARY_SUFFIX}")
 set(WEDPR_CRYPTO_fisco-bcos_LIBRARIES "${SOURCE_PATH}/target/release/${CMAKE_STATIC_LIBRARY_PREFIX}ffi_c_fisco_bcos${CMAKE_STATIC_LIBRARY_SUFFIX}")
+set(WEDPR_CRYPTO_zkp_LIBRARIES "${SOURCE_PATH}/target/release/${CMAKE_STATIC_LIBRARY_PREFIX}ffi_c_zkp${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
 install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/wedpr-crypto/)
-install(FILES ${WEDPR_CRYPTO_crypto_LIBRARIES} ${WEDPR_CRYPTO_fisco-bcos_LIBRARIES} DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(FILES ${WEDPR_CRYPTO_crypto_LIBRARIES} ${WEDPR_CRYPTO_fisco-bcos_LIBRARIES} ${WEDPR_CRYPTO_zkp_LIBRARIES} DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
