@@ -6,16 +6,15 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
     SOURCE_PATH ${SOURCE_PATH}
-    PREFER_NINJA
     OPTIONS
         -DBUILD_ETCD_TESTS=OFF
 )
 set(VCPKG_POLICY_DLLS_WITHOUT_LIBS enabled)
 set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)
 
-vcpkg_install_cmake()
+vcpkg_cmake_install()
 vcpkg_fixup_cmake_targets(CONFIG_PATH lib/cmake/etcd-cpp-api)
 
 file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include)
