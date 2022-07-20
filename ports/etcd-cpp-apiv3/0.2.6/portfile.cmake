@@ -15,7 +15,7 @@ set(VCPKG_POLICY_DLLS_WITHOUT_LIBS enabled)
 set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)
 
 vcpkg_cmake_install()
-vcpkg_fixup_cmake_targets(CONFIG_PATH lib/cmake/etcd-cpp-api)
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/etcd-cpp-api)
 
 file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include)
 file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/share)
