@@ -39,6 +39,10 @@
     "boost-context": {
       "baseline": "1.79.0-m1",
       "port-version": 0
+    },
+    "etcd-cpp-apiv3": {
+      "baseline": "0.2.6",
+      "port-version": 0
     }
   }
 }
