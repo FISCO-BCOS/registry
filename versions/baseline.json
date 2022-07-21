@@ -43,6 +43,10 @@
     "etcd-cpp-apiv3": {
       "baseline": "0.2.6",
       "port-version": 0
+    },
+    "tikvclientc": {
+      "baseline": "1.0.0",
+      "port-version": 0
     }
   }
 }
