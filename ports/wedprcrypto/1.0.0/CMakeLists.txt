@@ -10,12 +10,14 @@ ExternalProject_Add(wedprcrypto
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ""
   BUILD_BYPRODUCTS ${WEDPR_CRYPTO_crypto_LIBRARIES} ${WEDPR_CRYPTO_fisco-bcos_LIBRARIES}
-  COMMAND ${CARGO_BIN} +nightly-2022-07-28 build --release
+  COMMAND cd ${SOURCE_PATH}
+  COMMAND ${CARGO_BIN} --version
+  COMMAND ${CARGO_BIN} build --release
     --features "wedpr_f_hash_keccak256 wedpr_f_signature_secp256k1 wedpr_f_signature_sm2 wedpr_f_hash_sm3 wedpr_f_vrf_curve25519 wedpr_f_crypto_block_cipher_aes wedpr_f_crypto_block_cipher_sm4 wedpr_f_hash_ripemd160 wedpr_f_hash_sha2 wedpr_f_hash_sha3 wedpr_f_hash_blake2b wedpr_f_signature_ed25519"
     --no-default-features --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_crypto_binary/Cargo.toml
-  COMMAND ${CARGO_BIN} +nightly-2022-07-28 build --release
+  COMMAND ${CARGO_BIN} build --release
     --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_fisco_bcos/Cargo.toml
-  COMMAND ${CARGO_BIN} +nightly-2022-07-28 build --release
+  COMMAND ${CARGO_BIN} build --release
     --manifest-path ${SOURCE_PATH}/ffi/ffi_c/ffi_c_zkp/Cargo.toml
   INSTALL_COMMAND ""
   # INSTALL_COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_BINARY_DIR}/wedpr-crypto-prefix/src/wedpr-crypto/third_party/include" "${WEDPR_CRYPTO_INSTALL}/include/wedpr-crypto"
