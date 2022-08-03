@@ -9,7 +9,13 @@ vcpkg_from_github(
 set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)
 set(VCPKG_POLICY_SKIP_DUMPBIN_CHECKS enabled)
 
-find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "$ENV{USERPROFILE}\\.cargo\\bin")
+if(CMAKE_HOST_WIN32)
+    set(USER_HOME "$ENV{USERPROFILE}")
+else()
+    set(USER_HOME "$ENV{HOME}")
+endif()
+
+find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "${USER_HOME}\\.cargo\\bin")
 message(STATUS "CARGO BIN: ${CARGO_BIN}")
 
 vcpkg_cmake_configure(
