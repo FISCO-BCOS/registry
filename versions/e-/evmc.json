@@ -3,6 +3,10 @@
       {
         "version": "9.0.0",
         "git-tree": "f13790d78dfc15463439419217ff0ef80eef3408"
+      },
+      {
+        "version": "10.0.0",
+        "git-tree": "66f87e3f61357dea82611201f0d751b242682dbc"
       }
     ]
   }
