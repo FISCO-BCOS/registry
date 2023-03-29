@@ -108,11 +108,12 @@ get_filename_component(MSYS_BIN_DIR "${MAKE}" DIRECTORY)
 
 if(BUILD_SHARED_LIBS)
     set(SHARED shared)
-    file(STRINGS "${BUILDDIR}/VERSION.dat" SHLIB_VERSION
-        REGEX "^SHLIB_VERSION=.*")
-    string(REGEX REPLACE "^(SHLIB_VERSION=)(.*)$" "\\2"
-        SHLIB_VERSION "${SHLIB_VERSION}")
+    #file(STRINGS "${BUILDDIR}/VERSION.dat" SHLIB_VERSION
+    #    REGEX "^SHLIB_VERSION=.*")
+    #string(REGEX REPLACE "^(SHLIB_VERSION=)(.*)$" "\\2"
+    #    SHLIB_VERSION "${SHLIB_VERSION}")
 
+    set (SHLIB_VERSION "1.1")
     if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" OR CMAKE_SYSTEM_NAME STREQUAL "iOS")
         set(LIB_EXT dylib)
         set(LIB_EXTS ${SHLIB_VERSION}.${LIB_EXT})

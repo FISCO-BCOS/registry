@@ -10,7 +10,7 @@
     },
     "openssl": {
       "baseline": "1.1.1-tassl",
-      "port-version": 0
+      "port-version": 1
     },
     "evmone": {
       "baseline": "0.9.1",
