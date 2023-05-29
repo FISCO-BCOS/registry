@@ -55,6 +55,10 @@
     "tikvclientc": {
       "baseline": "1.0.0",
       "port-version": 0
+    },
+    "tbb": {
+      "baseline": "2021.8.0",
+      "port-version": 0
     }
   }
 }
