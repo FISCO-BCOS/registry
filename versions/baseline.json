@@ -13,11 +13,11 @@
       "port-version": 1
     },
     "evmone": {
-      "baseline": "0.9.1",
+      "baseline": "0.10.0",
       "port-version": 0
     },
     "evmc": {
-      "baseline": "10.0.0",
+      "baseline": "10.1.0",
       "port-version": 0
     },
     "ethash": {
@@ -25,7 +25,7 @@
       "port-version": 0
     },
     "intx": {
-      "baseline": "0.6.0",
+      "baseline": "0.10.1",
       "port-version": 0
     },
     "jemalloc": {
