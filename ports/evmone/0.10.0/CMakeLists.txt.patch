@@ -1,0 +1,11 @@
+--- a/lib/evmone/CMakeLists.txt	2022-07-10 17:27:09.388062714 +0800
++++ b/lib/evmone/CMakeLists.txt	2022-07-10 17:36:00.818060687 +0800
+@@ -51,7 +51,7 @@ endif()
+ 
+ set_source_files_properties(vm.cpp PROPERTIES COMPILE_DEFINITIONS PROJECT_VERSION="${PROJECT_VERSION}")
+ 
+-add_standalone_library(evmone)
++# add_standalone_library(evmone)
+ include(CMakePackageConfigHelpers)
+ 
+ write_basic_package_version_file(
