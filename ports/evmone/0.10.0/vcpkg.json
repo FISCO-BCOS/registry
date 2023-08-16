@@ -1,6 +1,6 @@
 {
     "name": "evmone",
-    "version-string": "0.9.1",
+    "version-string": "0.10.0",
     "homepage": "https://github.com/FISCO-BCOS/evmone",
     "description": "evmone",
     "dependencies": [
