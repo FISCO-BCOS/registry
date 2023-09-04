@@ -8,6 +8,11 @@
       "version": "3.0.3-m",
       "git-tree": "9150ef52f9c4b2ed173e0c11e45fe6570870c89f",
       "port-version": 1
+    },
+    {
+      "version": "3.0.3-m-tarsfix",
+      "git-tree": "c1028dfdfa92dc333482d7b4c791f2dada2d96d4",
+      "port-version": 1
     }
   ]
 }
