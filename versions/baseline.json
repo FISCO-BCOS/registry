@@ -37,7 +37,7 @@
       "port-version": 1
     },
     "tarscpp": {
-      "baseline": "3.0.3-m",
+      "baseline": "3.0.3-m-tarsfix",
       "port-version": 1
     },
     "wedprcrypto": {
