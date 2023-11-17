@@ -8,6 +8,10 @@
       "baseline": "3.0.0",
       "port-version": 0
     },
+    "fisco-bcos-cpp-sdk": {
+      "baseline": "3.6.0",
+      "port-version": 0
+    },
     "openssl": {
       "baseline": "1.1.1-tassl",
       "port-version": 1
@@ -42,6 +46,10 @@
     },
     "wedprcrypto": {
       "baseline": "1.0.0",
+      "port-version": 0
+    },
+    "wedpr-sdf": {
+      "baseline": "1.1.0",
       "port-version": 0
     },
     "boost-context": {
