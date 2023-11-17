@@ -48,7 +48,7 @@
       "baseline": "1.0.0",
       "port-version": 0
     },
-    "wedpr-sdf": {
+    "hsm-crypto": {
       "baseline": "1.1.0",
       "port-version": 0
     },

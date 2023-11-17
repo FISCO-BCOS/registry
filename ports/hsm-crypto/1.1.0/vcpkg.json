@@ -1,8 +1,8 @@
 {
-    "name": "wedpr-sdf",
+    "name": "hsm-crypto",
     "version-string": "1.1.0",
     "homepage": "https://github.com/WeBankBlockchain/hsm-crypto",
-    "description": "WeDPR-SDF",
+    "description": "HSM-CRYPTO",
     "dependencies": [
         {
             "name": "vcpkg-cmake",
