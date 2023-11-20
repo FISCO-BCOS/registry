@@ -9,6 +9,7 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
         SOURCE_PATH "${SOURCE_PATH}"
         OPTIONS
+        -DALLOCATOR=default
         -DTESTS=OFF
         -DWITH_TIKV=OFF
         -DWITH_TARS_SERVICES=OFF
