@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO WeBankBlockchain/hsm-crypto
-    REF 516bd743a4bd72ffa5c1e17c39e250597f2afd8c
-    SHA512 701adc2b9aa8eaf3a731ea796c466a72f3cb5bd725b2cba6f6395a694bfb648ffa882282c4ac8e8b1091989dbef26d71f652d71b0bffaf0ab807af2ce5e70178
+    REF 5d23a56283c845532bd7b346bad19cf23102149a
+    SHA512 9b9e9b2ec08707480beb3fabf0c596c9afabad988adc9de7131503f15cb2481a02bea398eeb0dc350d94251e2c25aaecdd55e0a060cbfd58f36279a5fe4b093f
     HEAD_REF master
 )
 

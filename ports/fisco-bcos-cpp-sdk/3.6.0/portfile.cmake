@@ -1,9 +1,9 @@
 vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
-        REPO kyonRay/FISCO-BCOS
-        REF 390784d196b456d143dd363f2aec0b04639ffbb5
-        SHA512 6bb29decf8d446543bff9200d069aa8c8b6fa0a4b2c4bd23989781016ee8b2bd0e6a5ba064a65ba09ea0c08880b862196b2cc388cbcaf953f264be04ea80137a
-        HEAD_REF feature-3.6.0
+        REPO FISCO-BCOS/FISCO-BCOS
+        REF 9cbedff260caa0d016cde2a7d06e1e921602f271
+        SHA512 11cc30e6b5a31a0132ad102a1b1c43cf0111c4b27c35c3a82ed50fd3da55c963c32fffe9be1b4f62988d64946595df0a6cb1ac1423a04ed74595c64b87cb51c6
+        HEAD_REF release-3.6.0
 )
 
 vcpkg_cmake_configure(
