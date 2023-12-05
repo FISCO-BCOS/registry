@@ -4,6 +4,7 @@ project(secp256k1 C)
 option(INSTALL_HEADERS "Install header files" ON)
 option(BUILD_TOOLS "Build tools" OFF)
 option(BUILD_EXAMPLES "Build examples" OFF)
+option(USE_EXTERNAL_DEFAULT_CALLBACKS "use external default callbacks" OFF)
 
 add_definitions(
     -DENABLE_MODULE_ECDH
@@ -11,6 +12,10 @@ add_definitions(
     -DENABLE_MODULE_EXTRAKEYS
     -DENABLE_MODULE_SCHNORRSIG
 )
+
+if (USE_EXTERNAL_DEFAULT_CALLBACKS)
+    add_definitions(-DUSE_EXTERNAL_DEFAULT_CALLBACKS)
+endif()
 
 file(GLOB SOURCES src/secp256k1.c)
 add_library(secp256k1 ${SOURCES})
@@ -56,7 +61,7 @@ if (BUILD_EXAMPLES)
     if (WIN32)
         target_link_libraries(schnorr_example PRIVATE Bcrypt)
     endif()
-    
+
     install(TARGETS ecdsa_example ecdh_example schnorr_example RUNTIME DESTINATION bin)
 endif()
 

@@ -21,6 +21,9 @@
     },
     "tools": {
       "description": "Build tools"
+    },
+    "external-callbacks": {
+      "description": "use external default callbacks"
     }
   }
 }
