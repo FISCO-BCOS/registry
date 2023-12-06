@@ -13,6 +13,7 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     FEATURES
         tools       BUILD_TOOLS
         examples    BUILD_EXAMPLES
+        external-callbacks    USE_EXTERNAL_DEFAULT_CALLBACKS
 )
 
 vcpkg_cmake_configure(
