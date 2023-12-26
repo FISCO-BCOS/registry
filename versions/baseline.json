@@ -60,6 +60,10 @@
       "baseline": "1.83.0",
       "port-version": 0
     },
+    "boost-beast": {
+      "baseline": "1.83.0",
+      "port-version": 0
+    },
     "etcd-cpp-apiv3": {
       "baseline": "0.2.6",
       "port-version": 0
