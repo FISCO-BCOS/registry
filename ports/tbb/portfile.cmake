@@ -15,6 +15,11 @@ vcpkg_cmake_configure(
     OPTIONS
         -DTBB_TEST=OFF
         -DTBB_STRICT=OFF
+        -DBUILD_SHARED_LIBS=OFF
+        -DCMAKE_CXX_FLAGS=-D__TBB_WEAK_SYMBOLS_PRESENT=0
+        -DTBB_ENABLE_IPO=OFF
+        -DTBB_EXAMPLES=OFF 
+        -DTBB_BENCH=OFF
 )
 
 vcpkg_cmake_install()
