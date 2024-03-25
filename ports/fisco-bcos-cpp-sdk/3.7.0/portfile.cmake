@@ -1,9 +1,9 @@
 vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO FISCO-BCOS/FISCO-BCOS
-        REF 4fde4263d2279489ef4cd3680d58b5ca32a4d457
-        SHA512 7eb47f776a163599b5239326afde044f6a0e35f2a0ab96a52aa6ddba04caafb6e8b4ba9222079d7a9ae7fa70ded7b75f5c367503df537f80f5a991e00ff428ec
-        HEAD_REF release-3.7.0
+        REF 5627584acd386fa44c9bbf5c741814ca52207e71
+        SHA512 156691a24fd77f087ef4f552b7365fcc094fc9cf9943df337e301474f8c50a436e34c05db7303a11ac148568fbc66f0f3191d99f6fb377f41cf49daf86846324
+        HEAD_REF master
 )
 
 vcpkg_cmake_configure(
