@@ -7,7 +7,7 @@ include(GNUInstallDirs)
 set(WEDPR_CRYPTO_INSTALL "${CMAKE_CURRENT_BINARY_DIR}/wedpr-crypto-install")
 ExternalProject_Add(wedprcrypto
   SOURCE_DIR "${SOURCE_PATH}"
-  CONFIGURE_COMMAND ""
+  CONFIGURE_COMMAND echo nightly-2024-02-25 > ${SOURCE_PATH}/rust-toolchain
   BUILD_COMMAND ""
   BUILD_BYPRODUCTS ${WEDPR_CRYPTO_crypto_LIBRARIES} ${WEDPR_CRYPTO_fisco-bcos_LIBRARIES}
   COMMAND cd ${SOURCE_PATH}
