@@ -1,0 +1,16 @@
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO FISCO-BCOS/evmc
+    REF b2986bdd68ddf9f35c3ae889c5bee8b643ecb4bd
+    SHA512 7eb0abce428de97b7018e56530376d76bf3bae9d28adfd178f4bbd3aad74c158315e07657a53d2c4d0e4f671f19533c39b9204985e2faf9725a18c09c5a10737
+    HEAD_REF master
+)
+
+vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} OPTIONS -DBUILD_SHARED_LIBS=OFF -DEVMC_TESTING=OFF -DEVMC_TOOLS=OFF -DHUNTER_ENABLED=OFF)
+vcpkg_cmake_build()
+vcpkg_cmake_install()
+
+vcpkg_cmake_config_fixup(CONFIG_PATH /lib/cmake/evmc)
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
