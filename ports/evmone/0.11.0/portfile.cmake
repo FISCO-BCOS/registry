@@ -1,0 +1,15 @@
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO FISCO-BCOS/evmone
+    REF b209b6224edb679529de9104d33dd05312052b7f
+    SHA512 54bd9fc59e69c2299aaad748173c93524b5a3f1fe98ede9fae9d9a1215a696058a69a5db58ab523a1effcf09a1459b64818b5ea49e75f717761a9d5f7392a934
+    HEAD_REF master
+    PATCHES "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt.patch"
+)
+
+vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH} OPTIONS -DBUILD_SHARED_LIBS=OFF -DEVMONE_FUZZING=OFF -DHUNTER_ENABLED=OFF)
+vcpkg_cmake_build()
+vcpkg_cmake_install()
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+vcpkg_cmake_config_fixup(CONFIG_PATH /lib/cmake/evmone)
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
