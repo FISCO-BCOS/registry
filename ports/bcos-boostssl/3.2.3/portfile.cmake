@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO FISCO-BCOS/bcos-boostssl
-    REF 37784c5dcebcb65e6d98eddf463197dde0ea7501
-    SHA512 398cb6bd93ca30efd2fef14f9754ed6cce15bc275ec47a4d8270c46be6dda41ab75b2fcdee66561a5d052f4f6621bb547a2b56ec0a6a31cf4f87278ab705cf73
+    REF c57dbaca427422ebc9b627f56ee4618269560e7f
+    SHA512 bf40c5cae90dcb218e0f57a2def9658830fa4b1a29199173985913ccf3d14a838addaa945c4bc45f46dfc54ab6b56b0fe3b5528100bfca03856743a9e1f55565
     HEAD_REF main
 )
 
@@ -14,4 +14,7 @@ vcpkg_cmake_configure(
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 
-file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"  RENAME copyright)
+vcpkg_cmake_config_fixup(CONFIG_PATH /lib/cmake/bcos-boostssl)
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
