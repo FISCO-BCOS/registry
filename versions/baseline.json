@@ -4,6 +4,10 @@
       "baseline": "1.0.0",
       "port-version": 0
     },
+    "bcos-boostssl": {
+      "baseline": "3.2.3",
+      "port-version": 0
+    },
     "hsm-crypto": {
       "baseline": "1.1.0",
       "port-version": 0
