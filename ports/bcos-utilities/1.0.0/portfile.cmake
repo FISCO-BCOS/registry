@@ -1,18 +1,20 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO FISCO-BCOS/bcos-utilities
-    REF 5a931ffb716e7d3042ba845cf439a9c8b7609bd3
-    SHA512 267eae6140f47b273b0b41c862ea0f227ae1f8dd0f16ef1b12d40ed175cdea616d71228287e19aa58ac38c54c6fe3f8f69a131176099eda512bd1850b0e1a986
+    REF cefb87f78f2f501b3374597be31c9de2675d8fa8
+    SHA512 45bcfab59c7e9934e2ff5968a19e8cbb34b94c005a0d6f6132d38cda914f66b49476fe509f5f2e6d2c4ac5cd44c587c29a36bcacca0ec436bd7da7d51f1f2f8a
     HEAD_REF main
 )
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
-        -DBUILD_STATIC=ON
 )
 
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 
-file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"  RENAME copyright)
+vcpkg_cmake_config_fixup(CONFIG_PATH /lib/cmake/bcos-utilities)
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
