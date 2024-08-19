@@ -1,0 +1,120 @@
+{
+  "name": "bcos-utilities",
+  "version-string": "1.0.0",
+  "homepage": "https://github.com/FISCO-BCOS/bcos-utilities",
+  "description": "bcos-utilities",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    "boost-filesystem",
+    "boost-system",
+    "boost-log",
+    "boost-beast",
+    "boost-uuid",
+    "boost-heap",
+    "boost-graph",
+    "boost-context",
+    "boost-property-map",
+    "boost-chrono",
+    "boost-iostreams",
+    "boost-thread",
+    "boost-test",
+    "boost-compute",
+    "boost-container-hash",
+    "boost-multiprecision",
+    "boost-program-options",
+    "boost-variant2",
+    "tbb",
+    "zlib"
+  ],
+  "builtin-baseline": "51b14cd4e1230dd51c11ffeff6f7d53c61cc5297",
+  "overrides": [
+    {
+        "name": "boost-filesystem",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-system",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-log",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-beast",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-uuid",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-heap",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-graph",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-context",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-property-map",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-chrono",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-iostreams",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-thread",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-test",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-compute",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-container-hash",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-multiprecision",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-program-options",
+        "version": "1.83.0"
+    },
+    {
+        "name": "boost-variant2",
+        "version": "1.83.0"
+    },
+    {
+        "name": "tbb",
+        "version": "2021.8.0"
+    },
+    {
+      "name": "zlib",
+      "version": "1.2.12",
+      "port-version": 1
+    }
+  ]
+}
