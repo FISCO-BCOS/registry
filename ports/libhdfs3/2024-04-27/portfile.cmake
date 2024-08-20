@@ -1,15 +1,14 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO cyjseagull/libhdfs3
-    REF 5f1c0b884ff39d9627928a1aa780f488aa15b5cd
-    SHA512 a200053ae59c020d0ceba577cdb10ca5c3667b12564d7cd0e6ae1a0200ff439d30b942863da0c94f208d60d9f1ef48d9fe6e42f5f96c8d109ec28829da42bbb4
+    REPO FISCO-BCOS/libhdfs3
+    REF f91dff1e2f08f110475e7ab14579fba31cf92ee5
+    SHA512 479ba61a48b479103d6561b1fd92719041248e02f137622577d1bfaf282522fc736325e3eb2135e6268a9a557d9520598c06e6e0b4fa70228fd574f93117d3a3
     HEAD_REF apache-rpc-9
 )
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
-
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 
