@@ -1,15 +1,14 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO FISCO-BCOS/libhdfs3
-    REF 04fc37a6aa38455b517c3a7c56951b7c6b6e001c
-    SHA512 e2adca439b77c515c24b6a1280e45a601ceee038ae2fc415d1bc5e4ba8bff4473763a82fe7dc88059d4b10d30943a5f8e1f206efa7d4017adc07dbc0f9324aa2
+    REF f91dff1e2f08f110475e7ab14579fba31cf92ee5
+    SHA512 479ba61a48b479103d6561b1fd92719041248e02f137622577d1bfaf282522fc736325e3eb2135e6268a9a557d9520598c06e6e0b4fa70228fd574f93117d3a3
     HEAD_REF apache-rpc-9
 )
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
-
 vcpkg_cmake_build()
 vcpkg_cmake_install()
 
