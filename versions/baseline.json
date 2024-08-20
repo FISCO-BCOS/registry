@@ -1,7 +1,19 @@
 {
   "default": {
+	 "gsasl": {
+      "baseline": "2.2.1",
+      "port-version": 0
+    },
+    "libhdfs3": {
+      "baseline": "2024-04-27",
+      "port-version": 0
+    },
     "bcos-utilities": {
       "baseline": "1.0.0",
+      "port-version": 0
+    },
+    "bcos-boostssl": {
+      "baseline": "3.2.3",
       "port-version": 0
     },
     "hsm-crypto": {
