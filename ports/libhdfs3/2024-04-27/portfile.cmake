@@ -6,8 +6,18 @@ vcpkg_from_github(
     HEAD_REF apache-rpc-9
 )
 
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        "sse"   ENABLE_SSE
+)
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS
+        -DENABLE_BOOST=OFF
+        -DENABLE_COVERAGE=OFF
+        ${FEATURE_OPTIONS}
+    DISABLE_PARALLEL_CONFIGURE 
 )
 vcpkg_cmake_build()
 vcpkg_cmake_install()
