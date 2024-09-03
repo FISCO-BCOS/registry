@@ -140,4 +140,4 @@ index 9156e5f..31324fa 100644
 +add_library(upb_json_lib ALIAS upb::upb)
 +add_library(upb_textformat_lib ALIAS upb::upb)
 +add_library(upb ALIAS upb::upb)
-+add_library(utf8_range_lib ALIAS upb::utf8_range)
++add_library(utf8_range_lib ALIAS utf8_range::utf8_range)
