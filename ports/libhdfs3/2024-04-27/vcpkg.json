@@ -1,6 +1,7 @@
 {
   "name": "libhdfs3",
-  "version": "2024-04-27",
+  "version-date": "2024-04-27",
+  "port-version": 1,
   "description": "Native Hadoop RPC protocol and HDFS data transfer protocol implementation",
   "homepage": "https://github.com/FISCO-BCOS/libhdfs3",
   "supports": "!windows",
@@ -28,5 +29,10 @@
       "name": "vcpkg-cmake",
       "host": true
     }
-  ]
+  ],
+  "features": {
+    "sse": {
+      "description": "enable sse"
+    }
+  }
 }
