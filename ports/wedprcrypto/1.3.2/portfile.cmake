@@ -1,0 +1,31 @@
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO HaoXuan40404/WeDPR-Lab-Crypto-1
+    REF a250924b29a4e1a268623b4394aaa130433b9e61
+    SHA512 914edb4d29a005eaaeb769ef529a7fc4ff018e9852327b3b27749262f1feffb8e1d79b2b550670895d8e94adb57459d662d20aa9d527cd282f843fdcd8a83d79
+    HEAD_REF feature-k1vrf
+)
+
+set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)
+set(VCPKG_POLICY_SKIP_DUMPBIN_CHECKS enabled)
+
+if(CMAKE_HOST_WIN32)
+    set(USER_HOME "$ENV{USERPROFILE}")
+else()
+    set(USER_HOME "$ENV{HOME}")
+endif()
+
+find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "${USER_HOME}\\.cargo\\bin")
+message(STATUS "CARGO BIN: ${CARGO_BIN}")
+
+vcpkg_cmake_configure(
+    SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}"
+    OPTIONS -DSOURCE_PATH=${SOURCE_PATH} -DCARGO_BIN=${CARGO_BIN}
+)
+
+vcpkg_cmake_build()
+vcpkg_cmake_install()
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
