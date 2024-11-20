@@ -1,7 +1,7 @@
 {
     "name": "wedprcrypto",
     "version-string": "1.3.2",
-    "homepage": "https://github.com/HaoXuan40404/FISCO-BCOS",
+    "homepage": "https://github.com/WeBankBlockchain/WeDPR-Lab-Crypto",
     "description": "WeDPR-crypto",
     "dependencies": [
         {
