@@ -1,0 +1,31 @@
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO WeBankBlockchain/WeDPR-Lab-Crypto
+    REF 02ae24088221125e9720511a23177b9c26db0d5d
+    SHA512 ec81e2c8177f88b47707b52475c1575d2573485c9e6de9125b356ac460c4d80bd9d19642e3a0e7835212b4fbe3cb5da2dfcf7244015c2c98351a0e713985e081
+    HEAD_REF main
+)
+
+set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)
+set(VCPKG_POLICY_SKIP_DUMPBIN_CHECKS enabled)
+
+if(CMAKE_HOST_WIN32)
+    set(USER_HOME "$ENV{USERPROFILE}")
+else()
+    set(USER_HOME "$ENV{HOME}")
+endif()
+
+find_program(CARGO_BIN NAMES cargo REQUIRED PATHS "${USER_HOME}\\.cargo\\bin")
+message(STATUS "CARGO BIN: ${CARGO_BIN}")
+
+vcpkg_cmake_configure(
+    SOURCE_PATH "${CMAKE_CURRENT_LIST_DIR}"
+    OPTIONS -DSOURCE_PATH=${SOURCE_PATH} -DCARGO_BIN=${CARGO_BIN}
+)
+
+vcpkg_cmake_build()
+vcpkg_cmake_install()
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
