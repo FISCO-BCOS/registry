@@ -29,6 +29,8 @@ vcpkg_configure_make(
         --disable-gssapi
 )
 
+vcpkg_cmake_install()
+vcpkg_cmake_config_fixup(CONFIG_PATH "lib/cmake/gsasl")
 vcpkg_install_make()
 vcpkg_fixup_pkgconfig()
 
