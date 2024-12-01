@@ -9,8 +9,8 @@
       "port-version": 0
      },
     "libhdfs3": {
-      "baseline": "2024-04-27",
-      "port-version": 1
+      "baseline": "2024-11-29",
+      "port-version": 0
     },
     "bcos-utilities": {
       "baseline": "1.0.0",

@@ -1,6 +1,7 @@
 {
   "name": "libhdfs3",
-  "version": "2024-11-29",
+  "version-date": "2024-11-29",
+  "port-version": 0,
   "description": "Native Hadoop RPC protocol and HDFS data transfer protocol implementation",
   "homepage": "https://github.com/FISCO-BCOS/libhdfs3",
   "supports": "!windows",
@@ -31,7 +32,6 @@
     "gsasl",
     "krb5"
   ],
-  "builtin-baseline": "51b14cd4e1230dd51c11ffeff6f7d53c61cc5297",
   "overrides": [
     {
       "name":"boost-atomic",
@@ -69,5 +69,10 @@
       "name":"krb5",
       "version":  "1.21.3#0"
     }
-  ]
+  ],
+  "features": {
+    "sse": {
+      "description": "enable sse"
+    }
+  }
 }
