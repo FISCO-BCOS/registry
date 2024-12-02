@@ -25,8 +25,8 @@ vcpkg_configure_make(
     AUTOCONFIG
     OPTIONS
         ${CPPFLAGS_WINDOWS_STATIC}
+        --with-gssapi-impl=mit
         --disable-nls
-        --disable-gssapi
 )
 vcpkg_install_make()
 vcpkg_fixup_pkgconfig()
