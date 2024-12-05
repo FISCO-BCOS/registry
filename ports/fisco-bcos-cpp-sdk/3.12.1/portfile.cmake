@@ -4,6 +4,7 @@ vcpkg_from_github(
         REF 85992c91ad7a3a53e484e92987280d8a8aaa52b8
         SHA512 1de44b700fafc196b6d419a36c88d0f340d519f5f905a1bfb2862e37052900a80c045e83f285ef7093e6c64b973f863017f5fb84d8139de4d05146ebb23d1dc3
         HEAD_REF master
+        PATCHES "${CMAKE_CURRENT_LIST_DIR}/fix-concepts.patch"
 )
 
 vcpkg_cmake_configure(

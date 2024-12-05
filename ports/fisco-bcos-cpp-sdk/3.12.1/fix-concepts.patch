@@ -1,0 +1,52 @@
+diff --git a/bcos-codec/bcos-codec/rlp/Common.h b/bcos-codec/bcos-codec/rlp/Common.h
+index 4d899cde5..1306d977e 100644
+--- a/bcos-codec/bcos-codec/rlp/Common.h
++++ b/bcos-codec/bcos-codec/rlp/Common.h
+@@ -21,7 +21,7 @@
+ #pragma once
+ #include <bcos-utilities/Common.h>
+ #include <bcos-utilities/FixedBytes.h>
+-#include <concepts/bcos-concepts/Basic.h>
++#include <bcos-concepts/Basic.h>
+ #include <utility>
+ #include <vector>
+ 
+diff --git a/bcos-codec/bcos-codec/rlp/RLPEncode.h b/bcos-codec/bcos-codec/rlp/RLPEncode.h
+index 198cc1d36..46885f9dd 100644
+--- a/bcos-codec/bcos-codec/rlp/RLPEncode.h
++++ b/bcos-codec/bcos-codec/rlp/RLPEncode.h
+@@ -23,7 +23,7 @@
+ #include "Common.h"
+ #include <bcos-utilities/Common.h>
+ #include <bcos-utilities/DataConvertUtility.h>
+-#include <concepts/bcos-concepts/Basic.h>
++#include <bcos-concepts/Basic.h>
+ 
+ #include <utility>
+ #include <vector>
+diff --git a/bcos-rpc/bcos-rpc/web3jsonrpc/model/Bloom.h b/bcos-rpc/bcos-rpc/web3jsonrpc/model/Bloom.h
+index 1d40beb8b..595b7595a 100644
+--- a/bcos-rpc/bcos-rpc/web3jsonrpc/model/Bloom.h
++++ b/bcos-rpc/bcos-rpc/web3jsonrpc/model/Bloom.h
+@@ -24,7 +24,7 @@
+ #include <bcos-rpc/web3jsonrpc/model/Log.h>
+ #include <bcos-utilities/Common.h>
+ #include <bcos-utilities/DataConvertUtility.h>
+-#include <concepts/bcos-concepts/Basic.h>
++#include <bcos-concepts/Basic.h>
+ 
+ namespace bcos::rpc
+ {
+diff --git a/bcos-utilities/bcos-utilities/RefDataContainer.h b/bcos-utilities/bcos-utilities/RefDataContainer.h
+index d9486a47e..ce91d61bf 100644
+--- a/bcos-utilities/bcos-utilities/RefDataContainer.h
++++ b/bcos-utilities/bcos-utilities/RefDataContainer.h
+@@ -18,7 +18,7 @@
+  *  @date 2021-02-24
+  */
+ #pragma once
+-#include <concepts/bcos-concepts/Basic.h>
++#include <bcos-concepts/Basic.h>
+ #include <atomic>
+ #include <cassert>
+ #include <cstring>
