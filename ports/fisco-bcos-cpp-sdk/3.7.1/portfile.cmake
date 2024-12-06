@@ -4,6 +4,7 @@ vcpkg_from_github(
         REF 323e5a0d87fef3f698ce8e7d4a9a9e011f59e2ce
         SHA512 1143a423cbe72622843e477a4403883d2ab124ad028a7786ac88430da82036e4bf987ff6efea84342e0b4b3a8f10ae1d85a4bdcfbae11ea0992ea121ea26ac4c
         HEAD_REF master
+        PATCHES "${CMAKE_CURRENT_LIST_DIR}/fix-unused-this.patch"
 )
 
 vcpkg_cmake_configure(
